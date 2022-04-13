@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 abstract class AppColors {
   static const secondary = Color(0xff06B460);
   static const accent = Color(0xFF067558);
-  static const textDark = Color.fromARGB(255, 78, 88, 85);
+  static const textDark = Color(0xFF1B1B1B);
   static const textLight = Color(0xFFF5F5F5);
   static const textFaded = Color.fromARGB(255, 155, 180, 173);
   static const iconLight = Color(0xFFB1B4C0);
