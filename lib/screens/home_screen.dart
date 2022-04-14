@@ -5,13 +5,12 @@ import 'package:chat_app/pages/messages_page.dart';
 import 'package:chat_app/pages/notifications_page.dart';
 import 'package:chat_app/theme.dart';
 import 'package:chat_app/widgets/avatar.dart';
+import 'package:chat_app/widgets/glowing_action_button.dart';
 import 'package:chat_app/widgets/icon_buttons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
-
-
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -137,7 +136,16 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
                 isSelected: (selectedIndex == 1),
                 onTap: handleItemSelected,
               ),
-              GlowingActionButton(color: ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: GlowingActionButton(
+                  color: AppColors.secondary,
+                  icon: CupertinoIcons.add,
+                  onPressed: () {
+                    print('pressed TODO');
+                  },
+                ),
+              ),
               _NavigationBarItem(
                 index: 2,
                 lable: 'Calls',

@@ -1,3 +1,4 @@
+import 'package:chat_app/screens/chat_screen.dart';
 import 'package:chat_app/theme.dart';
 import 'package:chat_app/widgets/avatar.dart';
 import 'package:flutter/material.dart';
@@ -49,84 +50,90 @@ class _MessageTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      margin: EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: Colors.grey,
-            width: 0.2,
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          ChatScreen.route(messageData),
+        );
+      },
+      child: Container(
+        height: 100,
+        margin: const EdgeInsets.symmetric(horizontal: 8),
+        decoration: const BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: Colors.grey,
+              width: 0.2,
+            ),
           ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Avatar.medium(url: messageData.profilePicture),
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0, top: 8),
-                    child: '${messageData.senderName}'
-                        .text
-                        .overflow(TextOverflow.ellipsis)
-                        .letterSpacing(0.2)
-                        .wordSpacing(1.5)
-                        .fontWeight(FontWeight.w900)
-                        .make(),
-                  ),
-                  SizedBox(
-                      height: 20,
-                      child: '${messageData.message}'
-                          .text
+        child: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Avatar.medium(url: messageData.profilePicture),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0, top: 8),
+                      child: messageData.senderName.text
                           .overflow(TextOverflow.ellipsis)
-                          .size(12)
-                          .color(AppColors.textFaded)
-                          .make())
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: 20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SizedBox(
-                    height: 4,
-                  ),
-                  '${messageData.dateMessage.toUpperCase()}'
-                      .text
-                      .size(11)
-                      .letterSpacing(-0.2)
-                      .fontWeight(FontWeight.w600)
-                      .color(AppColors.textFaded)
-                      .make(),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Container(
-                    width: 18,
-                    height: 18,
-                    decoration: BoxDecoration(
-                        color: AppColors.secondary, shape: BoxShape.circle),
-                    child: Center(
-                      child:
-                          '1'.text.size(10).color(AppColors.textLight).make(),
+                          .letterSpacing(0.2)
+                          .wordSpacing(1.5)
+                          .fontWeight(FontWeight.w900)
+                          .make(),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                        height: 20,
+                        child: '${messageData.message}'
+                            .text
+                            .overflow(TextOverflow.ellipsis)
+                            .size(12)
+                            .color(AppColors.textFaded)
+                            .make())
+                  ],
+                ),
               ),
-            )
-          ],
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    SizedBox(
+                      height: 4,
+                    ),
+                    '${messageData.dateMessage.toUpperCase()}'
+                        .text
+                        .size(11)
+                        .letterSpacing(-0.2)
+                        .fontWeight(FontWeight.w600)
+                        .color(AppColors.textFaded)
+                        .make(),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      width: 18,
+                      height: 18,
+                      decoration: BoxDecoration(
+                          color: AppColors.secondary, shape: BoxShape.circle),
+                      child: Center(
+                        child:
+                            '1'.text.size(10).color(AppColors.textLight).make(),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
