@@ -29,6 +29,8 @@ abstract class AppTheme {
   static final visualDensity = VisualDensity.adaptivePlatformDensity;
 
   static ThemeData light() => ThemeData(
+        colorScheme:
+            ThemeData().colorScheme.copyWith(primary: AppColors.secondary),
         brightness: Brightness.light,
         accentColor: accentColor,
         visualDensity: visualDensity,
@@ -45,6 +47,7 @@ abstract class AppTheme {
 
   static ThemeData dark() => ThemeData(
         brightness: Brightness.dark,
+        primarySwatch: Colors.green,
         accentColor: accentColor,
         visualDensity: visualDensity,
         textTheme:
