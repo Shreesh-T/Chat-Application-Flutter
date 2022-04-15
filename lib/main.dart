@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             darkTheme: AppTheme.dark(),
             themeMode: ThemeMode.dark,
             title: 'InChat',
-            home: LoginScreen(),
+            home: HomeScreen(),
           );
         } else {
           return MaterialApp(
