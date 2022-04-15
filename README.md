@@ -14,7 +14,7 @@ A flutter chat application based on firebase SDKs and cloud firestore
   &nbsp;
   <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/signup.jpg?raw=true" width="230" title="Signup Page" /> 
   &nbsp;
-
+  <br>
   <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/homescreen.jpg?raw=true" width="230" title="Home Screen" />
   &nbsp;
   <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/notif.jpg?raw=true" width="230" title="Notification Page"/>
