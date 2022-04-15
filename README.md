@@ -1,16 +1,24 @@
 # chat_app
 
-A new Flutter project.
+A flutter chat application based on 
 
-## Getting Started
+## Features
+* Cloud Messaging
+* Search among contacts (on cloud database)
+* Login and Signup with user profile
 
-This project is a starting point for a Flutter application.
+## Preview
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/login.jpg?raw=true" width="230" title="Login Page"/>
+  &nbsp;
+  <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/signup.jpg?raw=true" width="230" title="Signup Page" /> 
+  &nbsp;
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/homescreen.jpg?raw=true" width="230" title="Home Screen" />
+  &nbsp;
+  <img src="https://github.com/Shreesh-T/Chat-Application-Flutter/blob/master/preview_images/notif.jpg?raw=true" width="230" title="Notification Page"/>
+  &nbsp;
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
