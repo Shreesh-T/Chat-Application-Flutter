@@ -1,6 +1,6 @@
 # chat_app
 
-A flutter chat application based on 
+A flutter chat application based on firebase SDKs and cloud firestore
 
 ## Features
 * Cloud Messaging
